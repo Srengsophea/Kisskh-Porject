@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel='stylesheet'
+    href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-brands/css/uicons-brands.css'>
+  <link rel="stylesheet" href="styles.css">
+  <script src="javas.js"></script>
+  <title>Kisskh Explore</title>
+</head>
+
+<body>
+
+
+  <nav class="navbar  fixed-top" style="background: rgb(0, 0, 0);">
+    <div class="container-fluid">
+      <div class="left-menu ">
+        <button id="navbar-toggler" class="navbar-toggler border-0 " type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><span
+            style="color: white;"><i class="bi bi-list fs-2" id="left-menu"></i></span>
+        </button>
+        <a class="navbar-brand fw-bold fst-italic ms-2" id="kisskh" href="#"><span
+            class="fs-2 text-light ">K</span><span class="initialism text-light">iss<span
+              class="text-warning">kh</span></span></a>
+      </div>
+      <div class="right-menu">
+        <a href="index.html" class="text-light me-3"><i class="bi bi-house-fill fs-5 me-2"></i>Home</a>
+        <a href="explore.html" class="text-light me-3"><i class="fi fi-ss-messages me-2"></i>Explore</a>
+        <a href="#" class="text-light me-3"><i class="bi bi-palette-fill me-2"></i>Themes</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal5" data-bs-whatever="@fat"
+          class="text-light me-3"><i class="bi bi-chat-right-text-fill me-2"></i>Request Drama</a>
+        <a href="#" class="text-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+          aria-controls="offcanvasBottom"><i class="bi bi-chat-left-dots-fill me-2"></i>FQA</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal6" data-bs-whatever="@fat" class="text-light me-3"><i class="bi bi-download me-2"></i>Install PWA App</a>
+      </div>
+      <div class="d-flex">
+        <button class="btn btn-outline-none me-1 text-light" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom1"
+        aria-controls="offcanvasBottom" id="btn1"><i class="bi bi-search me-1" ></i><span id="search-span">Search</span></button>
+        <button class="btn" id="btn" type="button"><span id="text-ls" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" data-bs-whatever="@mdo">Login</span> | <span id="text-ls"
+            data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@fat">Sign Up</span></button>
+      </div>
+      <div class="offcanvas offcanvas-start" style="background:rgb(24, 19, 19); width: 200px;" tabindex="-1"
+        id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header" style="background: rgb(0, 0, 0);">
+          <button class="navbar-toggler border-0" type="button" data-bs-dismiss="offcanvas" aria-label="Close"><span
+              style="color: white;"><i class="bi bi-list fs-2" id="left-menu" style="margin-left: -17px;"></i></span>
+          </button>
+          <h5 class="offcanvas-title fw-bold fst-italic " id="offcanvasNavbarLabel"><span
+              class="fs-2 text-light">K</span><span class="initialism text-light">iss<span
+              class="text-warning">kh</span></span></h5>
+        </div>
+        <div class="oncanvas-body  ">
+          <ul class="navbar-nav justify-content-end flex-grow-1 fw-bold">
+            <li class="nav-item">
+              <a class="nav-link active text-light" aria-current="page" href="index.html"><i
+                  class="bi bi-house-fill me-2"></i>Home</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link text-light " href="explore.html"><i class="fi fi-ss-messages me-2"></i></i>Explore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="#"><i class="bi bi-palette-fill me-2"></i>Themes</a>
+            </li>
+            <li class="nav-item">
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal5" data-bs-whatever="@fat"
+                class="nav-link text-light"><i class="bi bi-chat-right-text-fill me-2"></i>Request Drama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
+                aria-controls="offcanvasBottom" href="#"><i class="bi bi-chat-left-dots-fill me-2"></i>FQA</a>
+            </li>
+            <li class="nav-item">
+              <a data-bs-toggle="modal" data-bs-target="#exampleModal6" data-bs-whatever="@fat" class="nav-link text-light" href="#"><i class="bi bi-download me-2"></i>Install PWA App</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+  <div class="modal fade " id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content" style="background-color: rgb(56, 54, 54); color: white; width: 370px;">
+        <div class="modal-body ">
+          <form action="">
+            <h3 class="mb-4 ">Install App <span class="fw-bold fst-italic"><span class="fs-2 text-light">K</span><span class="initialism text-light">iss<span class="text-warning">kh</span></span></span> </h3> 
+            <p class="mb-3">Download our PWA App For Better Experience</p>
+            <div class="fm mt-2 d-flex justify-content-center ">
+              <a href="#" class="btn btn-primary me-3">Download <i class="bi bi-download"></i></a>
+              <a href="#" class="btn btn-primary">Google Play Store <i class="bi bi-google-play"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="explr " style="margin-top: 75px;">
+    <div class="scroll-container" id="scrollContainer">
+      <div class="container-fluid" >
+        <button class="btn btn-outline-light rounded-5">All</button>
+        <button class="btn btn-outline-light rounded-5">TV Serices</button>
+        <button class="btn btn-outline-light rounded-5">Moive</button>
+        <button class="btn btn-outline-light rounded-5">Anime</button>
+        <button class="btn btn-outline-light rounded-5">Hollywood</button>
+      </div>
+    </div>
+    <div class="scroll-container" id="scrollContainer1">
+      <div class="container-fluid mt-2">
+        <button class="btn btn-outline-light rounded-5">All Subtitle</button>
+        <button class="btn btn-outline-light rounded-5">English</button>
+        <button class="btn btn-outline-light rounded-5">Khmer</button>
+        <button class="btn btn-outline-light rounded-5">Indonesian</button>
+        <button class="btn btn-outline-light rounded-5">Malay</button>
+        <button class="btn btn-outline-light rounded-5">Thai</button>
+        <button class="btn btn-outline-light rounded-5">Arabic</button>
+      </div>
+    </div>
+    <div class="scroll-container" id="scrollContainer2">
+      <div class="container-fluid mt-2">
+        <button class="btn btn-outline-light  rounded-5">All Regions</button>
+        <button class="btn btn-outline-light  rounded-5">South Korea</button>
+        <button class="btn btn-outline-light  rounded-5">Chinese</button>
+        <button class="btn btn-outline-light  rounded-5">United State</button>
+        <button class="btn btn-outline-light  rounded-5">Thailand</button>
+        <button class="btn btn-outline-light  rounded-5">Japanese</button>
+        <button class="btn btn-outline-light  rounded-5">Hong Kong</button>
+        <button class="btn btn-outline-light  rounded-5">Taiwan</button>
+      </div>
+    </div>
+    
+    <div class="scroll-container" id="scrollContainer3">
+      <div class="container-fluid mt-2">
+        <button class="btn btn-outline-light rounded-5">All Action</button>
+        <button class="btn btn-outline-light rounded-5">On Going</button>
+        <button class="btn btn-outline-light rounded-5">Completed</button>
+        <button class="btn btn-outline-light rounded-5">Upcoming</button>
+      </div>
+    </div>
+    <div class="scroll-container" id="scrollContainer4">
+      <div class="container-fluid mt-2">
+        <button class="btn btn-outline-light rounded-5">Popular</button>
+        <button class="btn btn-outline-light rounded-5">Last Update</button>
+        <button class="btn btn-outline-light rounded-5">Release Date</button>
+      </div>
+    </div>
+
+
+  </div>
+  
+  <div class="modal fade " id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content" style="background-color: rgb(56, 54, 54); color: white; width: 370px;">
+        <div class="modal-body ">
+          <form action="">
+            <h3 class="mb-4">Chat With Us </h3>
+            <p>You Can <a href="">Request Drama</a> Or <a href="" class="text-danger">Report A Problem</a></p>
+            <button class="text-center btn bg-warning w-100"><a href=""
+                style="text-decoration: none;color: white;">http://127.0.0.1:5500/index.html</a><i
+                class="bi bi-link-45deg fs-4 ms-2"></i></button>
+            <div class="fm mt-2 d-flex justify-content-center ">
+              <button class="btn btn-primary me-3">Facebook <i class="bi bi-facebook"></i></button>
+              <button class="btn btn-primary">Messenger <i class="bi bi-messenger"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center ">
+      <div class="modal-content" style="background-color: rgb(36, 35, 35); color: white; width: 400px; ">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="">
+              <label for="recipient-name" class="col-form-label">Email or Username</label>
+              <input type="text" class="form-control bg-dark text-light" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="message-text" class="col-form-label">Password</label>
+              <input type="password" class="form-control bg-dark text-light" id="password">
+              <i class="bi bi-eye-slash" id="togglePassword"></i>
+              <script src="javas.js"></script>
+            </div>
+            <div class="form-check form-switch d-flex justify-content-between">
+              <div class="left-check">
+                <input class="form-check-input check-warning" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">Remember me</label>
+              </div>
+              <a href="#" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@fat">Forgot password</a>
+            </div>
+            <button type="submit" class="btn btn-warning w-100 mt-2">Login</button>
+            <p class="mt-2 text-center">Don't have an account? <a href="#"
+                class="link-warning link-underline-opacity-25 link-underline-opacity-100-hover" data-bs-toggle="modal"
+                data-bs-target="#exampleModal1" data-bs-whatever="@fat">Sign Up</a></p>
+            <div class="icon d-flex justify-content-center">
+              <a href=""><i class="fi fi-brands-google "></i></a>
+              <a href=""><i class="fi fi-brands-facebook"></i></a>
+              <a href=""><i class="fi fi-brands-twitter-alt-circle"></i></a>
+              <a href=""><i class="fi fi-brands-linkedin"></i></a>
+            </div>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Recovery Password Modal -->
+  <div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content" style="background-color: rgb(36, 35, 35); color: white; width: 400px;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Recovery Your Password!</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mt-0">
+              <label for="recipient-name" class="col-form-label">Email</label>
+              <input type="text" class="form-control bg-dark text-light mb-2" id="recipient-name">
+            </div>
+            <button type="submit" class="btn btn-warning w-100 mt-2">Send Code</button>
+            <div class="both-btn d-flex justify-content-between py-3">
+              <a href="#" class="link-info link-underline-opacity-25 link-underline-opacity-100-hover fw-bold"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">Back to Login</a>
+              ¯\_(ツ)_/¯
+              <a href="#" class="link-primary link-underline-opacity-25 link-underline-opacity-100-hover fw-bold"
+                data-bs-toggle="modal" data-bs-target="#exampleModal1" data-bs-whatever="@fat">Create new account</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog d-flex justify-content-center">
+      <div class="modal-content" style="background-color: rgb(36, 35, 35); color: white; width: 400px;">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sign Up</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="">
+              <label for="recipient-name" class="col-form-label">Email or Username</label>
+              <input type="text" class="form-control bg-dark text-light" id="recipient-name">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="col-form-label">Password</label>
+              <input type="password"  class="form-control password bg-dark text-light text-light" id="password" >
+              <i class="bi bi-eye-slash toggle" id="togglePassword"></i>
+              <label for="password" class="col-form-label">Comform Password</label>
+              <input type="password"  class="form-control password1 bg-dark text-light " id="password">
+              <i class="bi bi-eye-slash toggle1" id="togglePassword"></i>
+              <script src="javas.js"></script>
+            </div>
+            
+            <div class="form-check ">
+              <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+              <label class="form-check-label" for="flexSwitchCheckDefault">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" id="check" class="btn btn-warning w-100 mt-2 mb-2">Sign Up</button>
+            <p class="text-center">Already have an account? <a href="#"
+                class="link-warning link-underline-opacity-25 link-underline-opacity-100-hover" data-bs-toggle="modal"
+                data-bs-target="#exampleModal" data-bs-whatever="@fat">Login</a></p>
+            <div class="icon d-flex justify-content-center">
+              <a href=""><i class="fi fi-brands-google "></i></a>
+              <a href=""><i class="fi fi-brands-facebook"></i></a>
+              <a href=""><i class="fi fi-brands-twitter-alt-circle"></i></a>
+              <a href=""><i class="fi fi-brands-linkedin"></i></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-bottom bg-dark text-light" style="margin: auto; height: 100%; width: 100%;" tabindex="-1" id="offcanvasBottom1" aria-labelledby="offcanvasBottomLabel">
+    <div class="ooncanvas-header" style="background-color:rgb(32, 31, 31)">
+      <form class="d-flex mt-3 mb-3" id="searchin" role="search">
+        <button class="btn btn-outline-none text-light me-2" data-bs-dismiss="offcanvas"><i class="bi bi-chevron-double-left"></i></button>
+        <input class="" type="search" placeholder="Search" aria-label="Search">
+      </form>
+      <!-- <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button> -->
+    </div>
+    <div class="explr">
+      <div class="scroll-container" id="scrollContainer5">
+        <div class="container-fluid" >
+          <button class="btn btn-outline-light rounded-5">All</button>
+          <button class="btn btn-outline-light rounded-5">TV Serices</button>
+          <button class="btn btn-outline-light rounded-5">Moive</button>
+          <button class="btn btn-outline-light rounded-5">Anime</button>
+          <button class="btn btn-outline-light rounded-5">Hollywood</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function scrollContainer(id){
+      const scrollContainer = document.getElementById(id);
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+    
+        scrollContainer.addEventListener("mousedown", (e) => {
+            isDown = true;
+            scrollContainer.classList.add("active");
+            startX = e.pageX - scrollContainer.offsetLeft;
+            scrollLeft = scrollContainer.scrollLeft;
+        });
+    
+        scrollContainer.addEventListener("mouseleave", () => {
+            isDown = false;
+        });
+    
+        scrollContainer.addEventListener("mouseup", () => {
+            isDown = false;
+        });
+    
+        scrollContainer.addEventListener("mousemove", (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - scrollContainer.offsetLeft;
+            const walk = (x - startX) * 2; // Scroll speed
+            scrollContainer.scrollLeft = scrollLeft - walk;
+        });
+    }
+    scrollContainer("scrollContainer")
+    scrollContainer("scrollContainer1")
+    scrollContainer("scrollContainer2")
+    scrollContainer("scrollContainer3")
+    scrollContainer("scrollContainer4")
+    scrollContainer("scrollContainer5")
+  </script>
+    <hr class=" text-light m-2 "  >
+    <h3 class="ms-3">Popular Search</h3>
+    <div class="grid-container">
+      <div class="card swiper-slide">
+        <img src="asset/Battle.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Battle Throught The Heaven</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/hollywoon/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Moana 2</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Baby Girl </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Nosferatu</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/topdrama/image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Lovely Runner</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">True Beauty</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/topdrama/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">My Demon</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Marry My Husband </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide  text-light" id="card-movie" >
+        <img src="asset/image1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" id="card-title">Soul Land Season</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide  text-light" id="card-movie" >
+        <img src="asset/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" id="card-title">Cang Yuan Yu - The Demon Hunter</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Snowdeop</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Queen of Tears</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Twinkling Watermemlon </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image7.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">All of Us Are Dead</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image8.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">A Business Proposal</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/hollywoon/image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Beast Game</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Hight Potential</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/hollywoon/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Moana 2</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Baby Girl </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Nosferatu</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Kraven the Hunter</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Culpa Tuya - My Fault</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image7.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Wicked (2024)</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image8.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Mufasa The Lion King (HD CAM)</h6>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+  <!-- ========= -->
+  <div class="mt-3">
+    <div class="grid-container">
+      <div class="card swiper-slide">
+        <img src="asset/Battle.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Battle Throught The Heaven</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/hollywoon/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Moana 2</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Baby Girl </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Nosferatu</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/topdrama/image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Lovely Runner</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">True Beauty</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/topdrama/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">My Demon</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Marry My Husband </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide  text-light" id="card-movie" >
+        <img src="asset/image1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" id="card-title">Soul Land Season</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide  text-light" id="card-movie" >
+        <img src="asset/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title" id="card-title">Cang Yuan Yu - The Demon Hunter</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Snowdeop</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Queen of Tears</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Twinkling Watermemlon </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image7.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">All of Us Are Dead</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/topdrama/image8.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">A Business Proposal</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/hollywoon/image.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Beast Game</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image1.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Hight Potential</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide">
+        <img src="asset/hollywoon/image2.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Moana 2</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Baby Girl </h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image4.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Nosferatu</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image5.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Kraven the Hunter</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image6.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Culpa Tuya - My Fault</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image7.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Wicked (2024)</h6>
+        </div>
+      </div>
+      <div class="card swiper-slide ">
+        <img src="asset/hollywoon/image8.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">Mufasa The Lion King (HD CAM)</h6>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-bottom bg-dark text-light"style="height: 100%;" tabindex="-1" id="offcanvasBottom"
+    aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header ">
+      <h3 class="offcanvas-title text-center text-warning" id="offcanvasBottomLabel" >FQA</h3>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <h5 class="text-center">Frequently Asked Questions</h5>
+
+    <div class="faq-container">
+      <div class="faq-item ">
+          <div class="faq-question " onclick="toggleAnswer(this)">
+              <h5>Video error?</h5> <span>▼</span>
+          </div>
+          <div class="faq-answer ">
+              <p>Try reload it  if it still not working send episode number and title or link to here .</p>
+              <P>(Note: Our webside and app test and debug using google chrome)</P>
+            </div>
+      </div>
+      <div class="faq-item">
+          <div class="faq-question " onclick="toggleAnswer(this)">
+              <h5>Subtitle error?</h5> <span>▼</span>
+          </div>
+          <div class="faq-answer ">
+              <P>Send episode number and title or link to here <a href=""><i class="bi bi-person-lines-fill"></i></a> </P>
+          </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question " onclick="toggleAnswer(this)">
+          <h5>Other error ?</h5> <span>▼</span>
+        </div>
+        <div class="faq-answer ">
+            <p>Tell us what's your problem to here <a href=""><i class="bi bi-person-lines-fill"></i></a></p>
+        </div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question " onclick="toggleAnswer(this)">
+          <h5>Request drama ?</h5> <span>▼</span>
+        </div>
+        <div class="faq-answer ">
+            <p>Send title of your drama or anime to here <a href=""><i class="bi bi-person-lines-fill"></i></a></p>
+        </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question " onclick="toggleAnswer(this)">
+        <h5>Redirect ads proplem ?</h5> <span>▼</span>
+      </div>
+      <div class="faq-answer ">
+          <p>Follow this video introduction for those who can't watch video. *Note use browser such as Google Chrome, Firefox, safari ...</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question " onclick="toggleAnswer(this)">
+        <h5>Install mobile app ?</h5> <span>▼</span>
+      </div>
+      <div class="faq-answer ">
+          <iframe class="mb-5" width="100%" height="315" src="https://www.facebook.com/help/396404120401278/?helpref=uf_share" frameborder="0"></iframe>
+          <a class="text-light d-flex justify-content-end" href="https://www.facebook.com/help/396404120401278/list?ref=embed_video">Help Center <img src="asset/iconfacebook.png" class="ms-2" width="25px" alt=""></a>
+      
+        </div>
+    </div>
+    <div class="faq-item">
+    <div class="faq-question " onclick="toggleAnswer(this)">
+      <h5>Change Subtitle Style ?</h5> <span>▼</span>
+    </div>
+    <div class="faq-answer ">
+        <h5>Andriod</h5>
+        <ol>
+          <li>Open your device's Settings App <i class="bi bi-gear-wide-connected"></i></li>
+          <li>Tap <b>Accessibility,then tap</b><b>Caption prefernces.</b></li>
+          <li>Tap <b>Caption size and style.</b></li>
+          <li>To change caption size, tap <b>Text size</b>, then select the text size.</li>
+          <li>To change the style and color for caption text and background, tap <b>Caption style</b>, then select the style.</li>
+        </ol>
+        <h5>Video</h5>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/A_ZTFrLJ8oM?si=e9UTDbpnM5wuDhd4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h5>IOS</h5>
+        <ol>
+          <li>Go to setting > <b>Accessibility</b>><b> Subtitle</b> & <b>Captioning.</b></li>
+          <li>If you prefer closed captioning or subtitles for the deaf and hard of hearing when available, turn on <b>Closed Captions + SDH.</b></li>
+          <li>Tap <b>Style</b>, then choose an existing caption style or create a new style based on the following:
+           <ul>
+            <li>Font, size, and color</li>
+            <li>Background color and opacity</li>
+            <li>Text opacity, edge style, and highlight</li>
+           </ul>
+          </li>
+        </ol>
+        <h5>Video</h5>
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/HPaadJsbGY4?si=ZOe3_gGOcSMX8Cwp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h5>Window</h5>
+        <ol>
+          <li>On a Windows 10 PC, go to <b>Settings.</b></li>
+          <li>Tap or <b>clickEase of Access.</b></li>
+          <li>Tap or click <b>Closed captions.</b></li>
+          <li>Customize how closed captions will be displayed on your screens.
+            Note Your changes will be reflected in the Preview pane at the top of the window as you make them.</li>
+        </ol>
+    
+    </div>
+  </div>
+  </div>  
+  <script>
+      function toggleAnswer(element) {
+          let answer = element.nextElementSibling;
+          let icon = element.querySelector("span");
+          if (answer.style.maxHeight) {
+              answer.style.maxHeight = null;
+              icon.textContent = "▼";
+          } else {
+              answer.style.maxHeight = answer.scrollHeight + "px";
+              icon.textContent = "▲";
+          }
+      }
+  </script>
+    <div class="facebook text-center mb-5 mt-2">
+      <button class="btn btn-primary " style="width: 210px;">Find us on Facebook <i class="bi bi-facebook ms-1"></i></button>
+    </div>
+    <hr class="text-light">
+    <footer class="d-flex justify-content-center mt-4 bg-dark">
+      <div class="container text-light  row row-cols-2 row-cols-sm-2 row-cols-md-4 mt-3 mb-3" id="footer">
+        <div class="col mb-2">
+          <h6 id="h-footer">COMPANY</h6>
+          <a href="" id="footer-text">About Us</a><br>
+          <a href="" id="footer-text">Contact Us</a><br>
+          <a href="" id="footer-text">Term of Us</a><br>
+          <a href="" id="footer-text">Privacy Policy</a>
+        </div>
+        <div class="col">
+          <h6 id="h-footer">PARTNERS</h6>
+          <a href="" id="footer-text">Advertise</a><br>
+          <a href="" id="footer-text">Partner with Us</a>
+        </div>
+        <div class="col">
+          <h6 id="h-footer">PRESS</h6>
+          <a href="" id="footer-text">Press Release</a><br>
+          <a href="" id="footer-text">Blog</a><br>
+          <a href="" id="footer-text">Press Kit</a><br>
+          <a href="" id="footer-text">Press Media Kit</a>
+        </div>
+        <div class="col">
+          <h6 id="h-footer"> FOLLOW US</h6>
+          <a href="" id="footer-text"> <i class="bi bi-youtube me-1" ></i>You Tube</a><br>
+          <a href="" id="footer-text"> <i class="bi bi-instagram me-1" ></i>Instagram</a><br>
+          <a href="" id="footer-text"> <i class="bi bi-facebook me-1" ></i>Facebook</a><br>
+          <a href="" id="footer-text"> <i class="bi bi-tiktok me-1" ></i>Tik Tok</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <footer class="d-flex justify-content-center mt-4 bg-dark">
+    <div class="container text-light  row row-cols-2 row-cols-sm-2 row-cols-md-4 mt-3 mb-3" id="footer">
+      <div class="col mb-2">
+        <h6 id="h-footer">COMPANY</h6>
+        <a href="" id="footer-text">About Us</a><br>
+        <a href="" id="footer-text">Contact Us</a><br>
+        <a href="" id="footer-text">Term of Us</a><br>
+        <a href="" id="footer-text">Privacy Policy</a>
+      </div>
+      <div class="col">
+        <h6 id="h-footer">PARTNERS</h6>
+        <a href="" id="footer-text">Advertise</a><br>
+        <a href="" id="footer-text">Partner with Us</a>
+      </div>
+      <div class="col">
+        <h6 id="h-footer">PRESS</h6>
+        <a href="" id="footer-text">Press Release</a><br>
+        <a href="" id="footer-text">Blog</a><br>
+        <a href="" id="footer-text">Press Kit</a><br>
+        <a href="" id="footer-text">Press Media Kit</a>
+      </div>
+      <div class="col">
+        <h6 id="h-footer"> FOLLOW US</h6>
+        <a href="" id="footer-text"> <i class="bi bi-youtube me-1" ></i>You Tube</a><br>
+        <a href="" id="footer-text"> <i class="bi bi-instagram me-1" ></i>Instagram</a><br>
+        <a href="" id="footer-text"> <i class="bi bi-facebook me-1" ></i>Facebook</a><br>
+        <a href="" id="footer-text"> <i class="bi bi-tiktok me-1" ></i>Tik Tok</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
